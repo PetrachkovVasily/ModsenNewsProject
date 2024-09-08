@@ -8,9 +8,17 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    height: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     &::-webkit-scrollbar {
       display: none;
+    }
+
+    #root {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
     }
   }
 `
