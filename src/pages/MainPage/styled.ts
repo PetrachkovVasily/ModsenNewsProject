@@ -8,6 +8,7 @@ export const StyledMain = styled.main`
   flex-direction: column;
   padding-left: 16px;
   padding-right: 16px;
+  flex-grow: 1;
 
   @media (max-width: 698px) {
     padding: 0;
