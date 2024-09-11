@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const StyledFooter = styled.footer`
   width: 100%;
+  min-height: 240px;
   height: 240px;
   display: flex;
   justify-content: center;
@@ -14,6 +15,7 @@ export const StyledFooter = styled.footer`
 
   @media (max-width: 524px) {
     height: 392px;
+    min-height: 392px;
   }
 
   @media (max-width: 524px) {

@@ -1,18 +1,20 @@
 import * as React from "react"
 import { ArticleHeader, Author, Date, Description, StyledTitles } from "./styled"
+import { Article } from "@utils/Article"
+import { SideArticleProps } from "@utils/SideArticleProps"
 
-function Titles() {
+function Titles({article}: SideArticleProps) {
   return (
     <StyledTitles>
       <ArticleHeader>
-        Qwertyui sddfssdf dfgdfg
+        {article.title}
       </ArticleHeader>
       <Description>
         <Date>
-          20 Sep 2023, 8:00pm
+          {article.publishedAt}
         </Date>
         <Author>
-          by Bloomberg News
+          by {article.source.name}
         </Author>
       </Description>
     </StyledTitles>

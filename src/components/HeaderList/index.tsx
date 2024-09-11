@@ -8,7 +8,7 @@ function HeaderList() {
       {
         listElementArray.map((element) => {
           return (
-            <ListElement>{element}</ListElement>
+            <ListElement key={Date.now().toString(36) + Math.random().toString(36)}>{element}</ListElement>
           )
         })
       }

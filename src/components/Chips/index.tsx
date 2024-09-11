@@ -1,10 +1,11 @@
 import * as React from "react"
 import { StyledChips } from "./styled"
+import { StringProps } from "@utils/StringProps"
 
-function Chips() {
+function Chips({publisher}: StringProps) {
   return (
     <StyledChips>
-      {'News  >  Financial Post'}
+      {'News  >  ' + publisher}
     </StyledChips>
   )
 }

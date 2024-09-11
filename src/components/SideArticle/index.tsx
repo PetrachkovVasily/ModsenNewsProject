@@ -1,20 +1,31 @@
 import * as React from "react"
 import { ArticleImg, ArticleInfo, AuthorAndDate, Date, Description, StyledSideArticle, Title } from "./styled"
 import content from "@assets/content.jpeg"
+import { Article } from "@utils/Article";
+import { SideArticleProps } from "@utils/SideArticleProps";
+import { useAppDispatch, useAppSelector } from "@hooks/redux";
+import { switchArticle } from "@store/reducers/ActionCreator";
 
-function SideArticle() {
+function SideArticle({article}: SideArticleProps) {
+  const dispatch = useAppDispatch()
+  const {currentArticle, isLoading, error} = useAppSelector(state => state.newsReducer)
+
+  function handleChangeArticle() {
+    dispatch(switchArticle(article))
+  }
+  
   return (
-    <StyledSideArticle>
-      <ArticleImg src={content} alt="Article Image"/>
+    <StyledSideArticle onClick={handleChangeArticle}>
+      <ArticleImg src={article.urlToImage || content} alt="Article Image"/>
       <ArticleInfo>
         <Title>
-          U.S. downs suspected Chinese spy balloon
+          {article.title}
         </Title>
         <Description>
-          China called the vessel`s downing “an excessive reaction” and said it “retains the right to respond...
+          {article.description}
         </Description>
         <AuthorAndDate>
-          Craig Bator - <Date>27 Dec 2020</Date>
+          {article.author} - <Date>{article.publishedAt}</Date>
         </AuthorAndDate>
       </ArticleInfo>
     </StyledSideArticle>

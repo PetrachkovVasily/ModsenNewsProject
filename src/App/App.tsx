@@ -12,14 +12,12 @@ import { fetchNews } from "@store/reducers/ActionCreator";
 
 function App() {
   const dispatch = useAppDispatch()
-  const {news, isLoading, error} = useAppSelector(state => state.newsReducer)
+  const {currentPage, isLoading, error} = useAppSelector(state => state.newsReducer)
 
   useEffect(() => {
-    dispatch(fetchNews())
-    console.log(news)
-  }, [])
+    dispatch(fetchNews(currentPage))
+  }, [currentPage])
 
-  console.log(news)
   return (
     <>
       <GlobalStyles/>
