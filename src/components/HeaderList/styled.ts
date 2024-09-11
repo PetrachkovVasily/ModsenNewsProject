@@ -12,10 +12,11 @@ export const ListWrapper = styled.div`
   }
 `
 
-export const ListElement = styled.a`
+export const ListElement = styled.h3`
   font-size: 14px;
   color: #FFFFFF;
   cursor: pointer;
+  text-decoration: none;
 
   &:hover {
     color: #FFB366;
