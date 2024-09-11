@@ -32,19 +32,20 @@ export const ArticleInfo = styled.section`
   flex-direction: column;
   justify-content: space-between;
   height: 122px;
+  text-decoration: none;
 `
 
 export const Title = styled.h1`
   font-size: 16px;
   font-weight: 700;
   line-height: 20.8px;
-
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   line-height: 1.3em;
   height: 2.6em;
+  text-decoration: none;
 `
 
 export const Description = styled.p`

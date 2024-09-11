@@ -8,11 +8,8 @@ function ReadMoreButton() {
   const dispatch = useAppDispatch()
   const {currentPage, error} = useAppSelector(state => state.newsReducer)
 
-  function fetchMoreNews() {    
-    console.log('z');
-    
+  function fetchMoreNews() {
     dispatch(switchPage(currentPage))
-    console.log('x');
   }
 
   return (

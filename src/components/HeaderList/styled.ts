@@ -17,6 +17,9 @@ export const ListElement = styled.h3`
   color: #FFFFFF;
   cursor: pointer;
   text-decoration: none;
+  font-weight: 300;
+  line-height: 21px;
+
 
   &:hover {
     color: #FFB366;

@@ -9,6 +9,7 @@ import { newsSlice } from "@store/reducers/newsSlice";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchNews } from "@store/reducers/ActionCreator";
+import Loader from "@components/Loader";
 
 function App() {
   const dispatch = useAppDispatch()
@@ -23,7 +24,7 @@ function App() {
       <GlobalStyles/>
       <Header/>
       <BurgerMenu/>
-      <Outlet/>
+      {!isLoading ? <Outlet/> : <Loader/>}
       <Footer/>
     </>
   )

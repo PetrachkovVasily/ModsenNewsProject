@@ -20,5 +20,10 @@ export const GlobalStyles = createGlobalStyle`
       flex-direction: column;
       height: 100%;
     }
+
+    a {
+      text-decoration: none;
+      color: #2C3144;
+    }
   }
 `
