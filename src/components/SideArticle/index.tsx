@@ -1,6 +1,6 @@
 import * as React from "react"
 import { ArticleImg, ArticleInfo, AuthorAndDate, Date, Description, StyledSideArticle, Title } from "./styled"
-import content from "@assets/content.jpeg"
+import content from "@assets/image-off.svg"
 import { Article } from "@utils/Article";
 import { SideArticleProps } from "@utils/SideArticleProps";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";
@@ -12,6 +12,7 @@ function SideArticle({article}: SideArticleProps) {
 
   function handleChangeArticle() {
     dispatch(switchArticle(article))
+    window.scroll(0, 0)
   }
   
   return (

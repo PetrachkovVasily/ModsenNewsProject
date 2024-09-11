@@ -22,7 +22,7 @@ function App() {
     <>
       <GlobalStyles/>
       <Header/>
-      {/* <BurgerMenu/> */}
+      <BurgerMenu/>
       <Outlet/>
       <Footer/>
     </>

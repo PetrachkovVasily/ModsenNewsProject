@@ -2,7 +2,6 @@ import * as React from "react"
 import { StyledNewsList } from "./styled"
 import SideArticle from "@components/SideArticle"
 import { useAppDispatch, useAppSelector } from "@hooks/redux"
-import { Link } from "react-router-dom"
 
 function NewsList() {
   const dispatch = useAppDispatch()

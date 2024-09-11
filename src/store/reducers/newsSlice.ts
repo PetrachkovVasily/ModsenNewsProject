@@ -7,6 +7,7 @@ export interface NewsState {
   error: string;
   currentPage: number;
   currentArticle: Article;
+  isOpen: boolean
 }
 
 const initialState: NewsState = {
@@ -26,6 +27,7 @@ const initialState: NewsState = {
     url: "",
     urlToImage: ""
   },
+  isOpen: false,
 }
 
 export const newsSlice = createSlice({
@@ -53,6 +55,17 @@ export const newsSlice = createSlice({
     },
     changeCurrentArticle(state, action: PayloadAction<Article>) {      
       state.currentArticle = action.payload;
+    },
+    openMenu(state) {
+      state.isOpen = !state.isOpen;
+      
+      const element = document.getElementById('sideWrapper')
+      if (element) {
+        if (state.isOpen)
+        element.style.right = '0'
+        else 
+        element.style.right = '-390px'
+      }
     }
   }
 })

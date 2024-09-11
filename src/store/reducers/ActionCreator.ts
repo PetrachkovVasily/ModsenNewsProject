@@ -34,3 +34,7 @@ export const switchArticle = (article: Article) => async (dispatch: AppDispatch)
 export const switchPage = (page: number) => async (dispatch: AppDispatch) => {
     dispatch(newsSlice.actions.changeCurrentPage(page))
 }
+
+export const chengeIsOpen = () => async (dispatch: AppDispatch) => {
+    dispatch(newsSlice.actions.openMenu())
+}
