@@ -12,6 +12,7 @@ function MainPage() {
     <StyledMain>
       <ContentWrapper>
         <NewsWrapper>
+          <h3></h3>
           {!isLoading ? <Article/> : <Loader/>}
         </NewsWrapper>
         <SideNewsHider>
