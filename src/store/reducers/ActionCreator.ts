@@ -3,11 +3,8 @@ import { AppDispatch } from "..";
 import { newsSlice } from "./newsSlice";
 import axios from "axios";
 
-const API_KEY = 'deffc5a5a03d4d18b6e5b2e3980a2810';
-const URL = 'https://newsapi.org/v2/everything?' +
-'q=all&' +
-'pageSize=8&' +
-'page=';
+const API_KEY = process.env.APP_KEY;
+const URL = "https://newsapi.org/v2/everything?q=all&pageSize=8&page=";
 const KEY_PARAMS = '&apiKey=' + API_KEY;
 
 export const fetchNews = (page: number) => async (dispatch: AppDispatch) => {  
