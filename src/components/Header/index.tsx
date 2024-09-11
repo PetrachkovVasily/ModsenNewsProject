@@ -3,12 +3,11 @@ import { BurgerMenu, InnerHeader, Logo, StyledHeader } from "./styled"
 import HeaderList from "@components/HeaderList"
 import logo from "@assets/Logo.svg"
 import burger from "@assets/Hamburger Menu.svg"
-import { useAppDispatch, useAppSelector } from "@hooks/redux"
+import { useAppDispatch } from "@hooks/redux"
 import { chengeIsOpen } from "@store/reducers/ActionCreator"
 
 function Header() {
   const dispatch = useAppDispatch()
-  const {isOpen} = useAppSelector(state => state.newsReducer)
 
   function handleOpen() {
     dispatch(chengeIsOpen())

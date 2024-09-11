@@ -5,6 +5,7 @@ export const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   body {
@@ -19,6 +20,11 @@ export const GlobalStyles = createGlobalStyle`
       display: flex;
       flex-direction: column;
       height: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: #2C3144;
     }
   }
 `
