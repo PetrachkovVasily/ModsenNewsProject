@@ -5,7 +5,7 @@ import SideNewsWrapper from "@components/SideNewsWrapper"
 
 function BurgerMenu() {  
   return (
-    <StyledBurgerMenu id={'sideWrapper'}>
+    <StyledBurgerMenu tabIndex="0" id={'sideWrapper'}>
       <SideNewsWrapper/>
     </StyledBurgerMenu>
   )
