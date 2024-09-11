@@ -12,8 +12,4 @@ export const StyledBurgerMenu = styled.div`
   background-color: white;
   box-shadow: -5px 0px 10px #b2b2b2;
   transition: right 0.3s, box-sadow 0.1s;
-
-  @media (max-width: 698px) {
-    right: 0;
-  }
 `

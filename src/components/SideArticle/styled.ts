@@ -9,6 +9,11 @@ export const StyledSideArticle = styled.div`
   border-bottom: 1px solid #F0F1F1;
   padding-top: 24px;
   padding-bottom: 24px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #F0F1F1;
+  }
 `
 
 export const ArticleImg = styled.img`
