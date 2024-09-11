@@ -2,18 +2,14 @@ import * as React from "react"
 import { ContentWrapper, NewsWrapper, SideNewsHider, StyledMain } from "./styled"
 import Article from "@components/Article"
 import SideNewsWrapper from "@components/SideNewsWrapper"
-import { useAppSelector } from "@hooks/redux"
-import Loader from "@components/Loader"
+import { Link, Outlet } from "react-router-dom"
 
 function MainPage() {
-  const {isLoading} = useAppSelector(state => state.newsReducer)
-
   return (
     <StyledMain>
       <ContentWrapper>
         <NewsWrapper>
-          <h3></h3>
-          {!isLoading ? <Article/> : <Loader/>}
+          <Article/>
         </NewsWrapper>
         <SideNewsHider>
           <SideNewsWrapper/>
