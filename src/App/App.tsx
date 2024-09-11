@@ -7,11 +7,10 @@ import { Outlet } from "react-router";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";
 import { useEffect } from "react";
 import { fetchNews } from "@store/reducers/ActionCreator";
-import Loader from "@components/Loader";
 
 function App() {
   const dispatch = useAppDispatch()
-  const {currentPage, isLoading} = useAppSelector(state => state.newsReducer)
+  const {currentPage} = useAppSelector(state => state.newsReducer)
 
   useEffect(() => {
     dispatch(fetchNews(currentPage))
@@ -22,7 +21,7 @@ function App() {
       <GlobalStyles/>
       <Header/>
       <BurgerMenu/>
-      {!isLoading ? <Outlet/> : <Loader/>}
+      <Outlet/>
       <Footer/>
     </>
   )

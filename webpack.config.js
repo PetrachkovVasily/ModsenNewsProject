@@ -50,6 +50,9 @@ const config = {
       </html>`,
       filename: "index.html",
     }),
+    new webpack.EnvironmentPlugin({ 
+      APP_KEY : "deffc5a5a03d4d18b6e5b2e3980a2810", 
+    }),
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],
