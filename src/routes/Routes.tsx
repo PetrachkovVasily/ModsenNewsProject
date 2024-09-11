@@ -3,19 +3,19 @@ import MainPage from "@pages/MainPage";
 import * as React from "react";
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App/App";
-import Article from "@components/Article";
+import { APP, ERROR, MAIN } from "@constants/routsPaths";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: APP,
     element: <App/>,
     children: [
       { 
-        path: "", 
+        path: MAIN, 
         element: <MainPage/>
       },
       { 
-        path: "*", 
+        path: ERROR, 
         element: <ErrorPage/> 
       }
     ]

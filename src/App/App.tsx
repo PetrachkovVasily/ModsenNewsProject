@@ -5,15 +5,13 @@ import * as React from "react";
 import { GlobalStyles } from "./AppStyled";
 import { Outlet } from "react-router";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";
-import { newsSlice } from "@store/reducers/newsSlice";
-import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchNews } from "@store/reducers/ActionCreator";
 import Loader from "@components/Loader";
 
 function App() {
   const dispatch = useAppDispatch()
-  const {currentPage, isLoading, error} = useAppSelector(state => state.newsReducer)
+  const {currentPage, isLoading} = useAppSelector(state => state.newsReducer)
 
   useEffect(() => {
     dispatch(fetchNews(currentPage))

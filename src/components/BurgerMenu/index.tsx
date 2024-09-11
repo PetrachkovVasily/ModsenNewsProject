@@ -1,11 +1,11 @@
 import * as React from "react"
-import { useState } from "react"
 import { StyledBurgerMenu } from "./styled"
 import SideNewsWrapper from "@components/SideNewsWrapper"
+import { BURGER_ID } from "@constants/notes"
 
 function BurgerMenu() {  
   return (
-    <StyledBurgerMenu tabIndex="0" id={'sideWrapper'}>
+    <StyledBurgerMenu id={BURGER_ID}>
       <SideNewsWrapper/>
     </StyledBurgerMenu>
   )

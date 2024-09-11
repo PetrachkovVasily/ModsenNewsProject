@@ -1,3 +1,4 @@
+import { BURGER_ID, MAX_RIGHT, MIN_RIGHT } from "@constants/notes";
 import { createSlice, current, PayloadAction } from "@reduxjs/toolkit";
 import { Article } from "@utils/Article";
 
@@ -59,12 +60,12 @@ export const newsSlice = createSlice({
     openMenu(state) {
       state.isOpen = !state.isOpen;
       
-      const element = document.getElementById('sideWrapper')
+      const element = document.getElementById(BURGER_ID)
       if (element) {
         if (state.isOpen)
-        element.style.right = '0'
+        element.style.right = MIN_RIGHT
         else 
-        element.style.right = '-390px'
+        element.style.right = MAX_RIGHT
       }
     }
   }

@@ -6,7 +6,7 @@ import { switchPage } from "@store/reducers/ActionCreator"
 function ReadMoreButton() {
   
   const dispatch = useAppDispatch()
-  const {currentPage, error} = useAppSelector(state => state.newsReducer)
+  const {currentPage} = useAppSelector(state => state.newsReducer)
 
   function fetchMoreNews() {
     dispatch(switchPage(currentPage))

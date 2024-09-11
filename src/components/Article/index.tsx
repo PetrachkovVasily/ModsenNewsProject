@@ -3,11 +3,10 @@ import { ArticleImg, ArticleWrapper, Text } from "./styled"
 import Chips from "@components/Chips"
 import Titles from "@components/Titles"
 import content from "@assets/image-off.svg"
-import { useAppDispatch, useAppSelector } from "@hooks/redux"
+import { useAppSelector } from "@hooks/redux"
 
 function Article() {
-  const dispatch = useAppDispatch()
-  const {currentArticle, isLoading, error} = useAppSelector(state => state.newsReducer)
+  const {currentArticle} = useAppSelector(state => state.newsReducer)
 
   return (
     <ArticleWrapper>
