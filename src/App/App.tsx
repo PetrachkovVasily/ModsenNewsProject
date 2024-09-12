@@ -7,6 +7,7 @@ import { Outlet } from "react-router";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";
 import { useEffect } from "react";
 import { fetchNews } from "@store/reducers/ActionCreator";
+import ErrorBoundary from "@components/ErrorBoundary";
 
 function App() {
   const dispatch = useAppDispatch()
@@ -21,7 +22,9 @@ function App() {
       <GlobalStyles/>
       <Header/>
       <BurgerMenu/>
-      <Outlet/>
+      <ErrorBoundary>
+        <Outlet/>
+      </ErrorBoundary>
       <Footer/>
     </>
   )

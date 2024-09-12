@@ -34,10 +34,18 @@ export const Address = styled.h2`
     font-size: 14px;
     line-height: 21px;
   }
+
+  @media (max-width: 524px) {
+    text-align: center;
+  }
 `
 export const Contacts = styled(Address)`
   @media (max-width: 896px) {
     font-size: 16px;
     line-height: 24px;
+  }
+  
+  @media (max-width: 524px) {
+    text-align: center;
   }
 `
