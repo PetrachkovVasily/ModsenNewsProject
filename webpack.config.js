@@ -11,6 +11,10 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: '/'
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   module: {
     rules: [
@@ -45,6 +49,9 @@ const config = {
         </body>
       </html>`,
       filename: "index.html",
+    }),
+    new webpack.EnvironmentPlugin({ 
+      APP_KEY : "deffc5a5a03d4d18b6e5b2e3980a2810", 
     }),
   ],
   resolve: {
