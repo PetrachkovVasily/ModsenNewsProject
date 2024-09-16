@@ -12,13 +12,14 @@ import content from "@assets/image-off.svg";
 import { useAppDispatch } from "@hooks/redux";
 import { switchArticle } from "@store/reducers/ActionCreator";
 import { SideArticleProps } from "@utils/types/SideArticleProps";
+import { FIRST_ARTICLE } from "@constants/notes";
 
 export function SideArticle({ article }: SideArticleProps) {
   const dispatch = useAppDispatch();
 
   function handleChangeArticle() {
     dispatch(switchArticle(article));
-    window.scroll(0, 0);
+    window.scroll(FIRST_ARTICLE, FIRST_ARTICLE);
   }
 
   return (

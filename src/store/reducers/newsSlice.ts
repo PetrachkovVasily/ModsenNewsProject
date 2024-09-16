@@ -1,4 +1,4 @@
-import { BURGER_ID, MAX_RIGHT, MIN_RIGHT } from "@constants/notes";
+import { BURGER_ID, MAX_RIGHT, MIN_PAGE, MIN_RIGHT } from "@constants/notes";
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Article } from "@utils/types/Article";
 
@@ -15,7 +15,7 @@ const initialState: NewsState = {
   news: [],
   isLoading: false,
   error: "",
-  currentPage: 1,
+  currentPage: MIN_PAGE,
   currentArticle: {
     author: "",
     content: "",
@@ -41,7 +41,7 @@ export const newsSlice = createSlice({
     newsFetchingSuccess(state, action: PayloadAction<Article[]>) {
       state.isLoading = false;
       state.error = "";
-      if (state.currentPage == 1) {
+      if (state.currentPage == MIN_PAGE) {
         state.news = action.payload;
       } else {
         state.news = [...state.news, ...action.payload];
@@ -52,7 +52,7 @@ export const newsSlice = createSlice({
       state.error = action.payload;
     },
     changeCurrentPage(state, action: PayloadAction<number>) {
-      state.currentPage = action.payload + 1;
+      state.currentPage = action.payload + MIN_PAGE;
     },
     changeCurrentArticle(state, action: PayloadAction<Article>) {
       state.currentArticle = action.payload;

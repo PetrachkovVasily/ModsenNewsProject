@@ -2,6 +2,7 @@ import axios from "axios";
 import { AppDispatch } from "@store/index";
 import { newsSlice } from "@store/reducers/newsSlice";
 import { IArticles } from "@utils/types/Article";
+import { FIRST_ARTICLE, MIN_PAGE } from "@constants/notes";
 
 const API_KEY = process.env.APP_KEY;
 const URL =
@@ -14,9 +15,11 @@ export const fetchNews = (page: number) => async (dispatch: AppDispatch) => {
     const response = await axios.get<IArticles>(URL + page + KEY_PARAMS);
     dispatch(newsSlice.actions.newsFetchingSuccess(response.data.articles));
 
-    if (page == 1) {
+    if (page == MIN_PAGE) {
       dispatch(
-        newsSlice.actions.changeCurrentArticle(response.data.articles[0])
+        newsSlice.actions.changeCurrentArticle(
+          response.data.articles[FIRST_ARTICLE]
+        )
       );
     }
   } catch (error) {
