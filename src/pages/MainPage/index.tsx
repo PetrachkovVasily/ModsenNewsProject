@@ -5,10 +5,10 @@ import {
   SideNewsHider,
   StyledMain,
 } from "./styled";
-import Article from "@components/Article";
-import SideNewsWrapper from "@components/SideNewsWrapper";
-import Loader from "@components/Loader";
 import { useAppSelector } from "@hooks/redux";
+import { Article } from "@components/Article";
+import { SideNewsWrapper } from "@components/SideNewsWrapper";
+import { Loader } from "@components/Loader";
 
 function MainPage() {
   const { isLoading } = useAppSelector((state) => state.newsReducer);

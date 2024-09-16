@@ -3,7 +3,7 @@ import { StyledButton } from "./styled";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";
 import { switchPage } from "@store/reducers/ActionCreator";
 
-function ReadMoreButton() {
+export function ReadMoreButton() {
   const dispatch = useAppDispatch();
   const { currentPage } = useAppSelector((state) => state.newsReducer);
 
@@ -13,5 +13,3 @@ function ReadMoreButton() {
 
   return <StyledButton onClick={fetchMoreNews}>Read more</StyledButton>;
 }
-
-export default ReadMoreButton;

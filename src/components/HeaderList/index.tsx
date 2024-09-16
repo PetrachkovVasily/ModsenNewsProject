@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { NEWS } from "@constants/notes";
 import { MAIN } from "@constants/routsPaths";
 
-function HeaderList() {
+export function HeaderList() {
   let listElementArray = [
     { title: NEWS, key: 1 },
     { title: NEWS, key: 2 },
@@ -25,5 +25,3 @@ function HeaderList() {
     </ListWrapper>
   );
 }
-
-export default HeaderList;

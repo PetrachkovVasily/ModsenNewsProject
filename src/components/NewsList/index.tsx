@@ -1,11 +1,11 @@
 import * as React from "react";
 import { StyledNewsList } from "./styled";
-import SideArticle from "@components/SideArticle";
 import { useAppSelector } from "@hooks/redux";
 import { Link } from "react-router-dom";
 import { MAIN } from "@constants/routsPaths";
+import { SideArticle } from "@components/SideArticle";
 
-function NewsList() {
+export function NewsList() {
   const { news } = useAppSelector((state) => state.newsReducer);
 
   return (
@@ -20,5 +20,3 @@ function NewsList() {
     </StyledNewsList>
   );
 }
-
-export default NewsList;

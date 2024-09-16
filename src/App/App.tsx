@@ -1,19 +1,19 @@
-import BurgerMenu from "@components/BurgerMenu";
-import Footer from "@components/Footer";
-import Header from "@components/Header";
 import * as React from "react";
 import { GlobalStyles } from "./AppStyled";
 import { Outlet } from "react-router";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";
-import { useEffect } from "react";
-import ErrorBoundary from "@components/ErrorBoundary";
 import { fetchNews } from "@api/fetchNews";
+import { BurgerMenu } from "@components/BurgerMenu";
+import { ErrorBoundary } from "@components/ErrorBoundary";
+import { Footer } from "@components/Footer";
+import { Header } from "@components/Header";
+import { StyledHeader } from "@components/ErrorBoundary/styled";
 
 function App() {
   const dispatch = useAppDispatch();
-  const { currentPage } = useAppSelector((state) => state.newsReducer);
+  const { currentPage, error } = useAppSelector((state) => state.newsReducer);
 
-  useEffect(() => {
+  React.useEffect(() => {
     dispatch(fetchNews(currentPage));
   }, [currentPage]);
 
@@ -23,7 +23,8 @@ function App() {
       <Header />
       <BurgerMenu />
       <ErrorBoundary>
-        <Outlet />
+        {error == "" ? <Outlet /> : <StyledHeader>{error}</StyledHeader>}
+        {/* <Outlet /> */}
       </ErrorBoundary>
       <Footer />
     </>

@@ -3,7 +3,7 @@ import { Logo, ModsenLogo, StyledWrapper } from "./styled";
 import logo from "@assets/Modsen Logo.svg";
 import newsLogo from "@assets/Footer Logo.svg";
 
-function LogoWrapper() {
+export function LogoWrapper() {
   return (
     <StyledWrapper>
       <ModsenLogo src={logo} alt="Modsen logo" />
@@ -11,5 +11,3 @@ function LogoWrapper() {
     </StyledWrapper>
   );
 }
-
-export default LogoWrapper;

@@ -6,7 +6,7 @@ import {
   StyledInfoWrapper,
 } from "./styled";
 
-function InfoWrapper() {
+export function InfoWrapper() {
   return (
     <StyledInfoWrapper>
       <ContactInfoWrapper>
@@ -36,5 +36,3 @@ function InfoWrapper() {
     </StyledInfoWrapper>
   );
 }
-
-export default InfoWrapper;

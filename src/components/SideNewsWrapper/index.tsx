@@ -5,11 +5,11 @@ import {
   StyledHeader,
   StyledSideNewsWrapper,
 } from "./styled";
-import CrossButton from "@components/CrossButton";
-import NewsList from "@components/NewsList";
-import ReadMoreButton from "@components/ReadMoreButton";
+import { CrossButton } from "@components/CrossButton";
+import { NewsList } from "@components/NewsList";
+import { ReadMoreButton } from "@components/ReadMoreButton";
 
-function SideNewsWrapper() {
+export function SideNewsWrapper() {
   return (
     <SideNews>
       <StyledSideNewsWrapper>
@@ -23,5 +23,3 @@ function SideNewsWrapper() {
     </SideNews>
   );
 }
-
-export default SideNewsWrapper;

@@ -21,8 +21,11 @@ export const fetchNews = (page: number) => async (dispatch: AppDispatch) => {
     }
   } catch (error) {
     let message;
-    if (error instanceof Error) message = error.message;
-    else message = String(error);
+    if (error instanceof Error) {
+      message = error.message;
+    } else {
+      message = String(error);
+    }
     dispatch(newsSlice.actions.newsFetchingError(message));
   }
 };

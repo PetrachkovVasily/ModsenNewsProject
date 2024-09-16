@@ -4,7 +4,7 @@ import cross from "@assets/Cross.svg";
 import { useAppDispatch } from "@hooks/redux";
 import { chengeIsOpen } from "@store/reducers/ActionCreator";
 
-function CrossButton() {
+export function CrossButton() {
   const dispatch = useAppDispatch();
 
   function handleOpen() {
@@ -16,5 +16,3 @@ function CrossButton() {
     </StyledButton>
   );
 }
-
-export default CrossButton;

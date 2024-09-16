@@ -13,7 +13,7 @@ import { useAppDispatch } from "@hooks/redux";
 import { switchArticle } from "@store/reducers/ActionCreator";
 import { SideArticleProps } from "@utils/types/SideArticleProps";
 
-function SideArticle({ article }: SideArticleProps) {
+export function SideArticle({ article }: SideArticleProps) {
   const dispatch = useAppDispatch();
 
   function handleChangeArticle() {
@@ -34,5 +34,3 @@ function SideArticle({ article }: SideArticleProps) {
     </StyledSideArticle>
   );
 }
-
-export default SideArticle;
