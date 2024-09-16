@@ -5,14 +5,19 @@ import { NEWS } from "@constants/notes";
 import { MAIN } from "@constants/routsPaths";
 
 function HeaderList() {
-  let listElementArray = [NEWS, NEWS, NEWS, NEWS, NEWS];
+  let listElementArray = [
+    { title: NEWS, key: 1 },
+    { title: NEWS, key: 2 },
+    { title: NEWS, key: 3 },
+    { title: NEWS, key: 4 },
+    { title: NEWS, key: 5 },
+  ];
   return (
     <ListWrapper>
       {listElementArray.map((element) => {
-        const key = Date.now().toString(36) + Math.random().toString(36);
         return (
-          <Link key={key} to={MAIN}>
-            <ListElement key={key}>{element}</ListElement>
+          <Link key={element.key} to={MAIN}>
+            <ListElement key={element.key}>{element.title}</ListElement>
           </Link>
         );
       })}
