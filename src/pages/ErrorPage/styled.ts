@@ -1,21 +1,20 @@
+import { baseColumn } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledMain = styled.main`
   margin-top: 80px;
   width: 100%;
   height: 100%;
-  display: flex;
+  ${baseColumn}
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   padding-left: 16px;
   padding-right: 16px;
   flex-grow: 1;
 `;
 
 export const HeadersWrapper = styled.section`
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   align-items: center;
   gap: 15px;
 `;

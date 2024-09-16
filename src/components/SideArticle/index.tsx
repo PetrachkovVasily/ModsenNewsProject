@@ -1,4 +1,10 @@
 import * as React from "react";
+
+import { useAppDispatch } from "@hooks/redux";
+import { EMPTY_IMG, FIRST_ARTICLE } from "@constants/notes";
+import { switchArticle } from "@store/reducers/ActionCreator";
+import { SideArticleProps } from "@utils/types/SideArticleProps";
+
 import {
   ArticleImg,
   ArticleInfo,
@@ -8,10 +14,6 @@ import {
   StyledSideArticle,
   Title,
 } from "./styled";
-import { useAppDispatch } from "@hooks/redux";
-import { switchArticle } from "@store/reducers/ActionCreator";
-import { SideArticleProps } from "@utils/types/SideArticleProps";
-import { EMPTY_IMG, FIRST_ARTICLE } from "@constants/notes";
 
 export function SideArticle({ article }: SideArticleProps) {
   const dispatch = useAppDispatch();

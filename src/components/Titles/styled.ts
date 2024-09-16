@@ -1,8 +1,8 @@
+import { baseColumn } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledTitles = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   gap: 16px;
   color: #2c3144;
 `;
@@ -19,8 +19,7 @@ export const ArticleHeader = styled.h2`
 `;
 
 export const Description = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   gap: 4px;
 `;
 

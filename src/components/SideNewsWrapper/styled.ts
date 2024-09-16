@@ -1,3 +1,4 @@
+import { baseColumn } from "@utils/mixins";
 import styled from "styled-components";
 
 export const SideNews = styled.aside`
@@ -5,8 +6,7 @@ export const SideNews = styled.aside`
   outline: 1px solid #dbdbdb;
   width: 100%;
   max-width: 476px;
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   align-items: end;
 
   @media (max-width: 698px) {
@@ -16,8 +16,7 @@ export const SideNews = styled.aside`
 `;
 
 export const StyledSideNewsWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   width: 100%;
   color: #2c3144;
 `;

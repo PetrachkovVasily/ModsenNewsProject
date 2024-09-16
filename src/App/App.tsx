@@ -1,13 +1,16 @@
 import * as React from "react";
-import { GlobalStyles } from "./AppStyled";
+
 import { Outlet } from "react-router";
-import { useAppDispatch, useAppSelector } from "@hooks/redux";
+
 import { fetchNews } from "@api/fetchNews";
-import { BurgerMenu } from "@components/BurgerMenu";
-import { ErrorBoundary } from "@components/ErrorBoundary";
 import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
+import { BurgerMenu } from "@components/BurgerMenu";
+import { ErrorBoundary } from "@components/ErrorBoundary";
+import { useAppDispatch, useAppSelector } from "@hooks/redux";
 import { StyledHeader } from "@components/ErrorBoundary/styled";
+
+import { GlobalStyles } from "./AppStyled";
 
 function App() {
   const dispatch = useAppDispatch();

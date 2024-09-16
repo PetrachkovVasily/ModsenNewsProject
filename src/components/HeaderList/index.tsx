@@ -1,8 +1,11 @@
 import * as React from "react";
-import { ListElement, ListWrapper } from "./styled";
+
 import { Link } from "react-router-dom";
+
 import { NEWS } from "@constants/notes";
 import { MAIN } from "@constants/routsPaths";
+
+import { ListElement, ListWrapper } from "./styled";
 
 export function HeaderList() {
   let listElementArray = [

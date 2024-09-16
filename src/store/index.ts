@@ -1,5 +1,7 @@
-import { combineReducers, legacy_createStore as createStore } from "redux";
+import { combineReducers } from "redux";
+
 import { configureStore } from "@reduxjs/toolkit";
+
 import newsReducer from "./reducers/newsSlice";
 
 export const rootReducer = combineReducers({

@@ -1,7 +1,9 @@
 import * as React from "react";
-import { StyledBurgerMenu } from "./styled";
+
 import { BURGER_ID } from "@constants/notes";
 import { SideNewsWrapper } from "@components/SideNewsWrapper";
+
+import { StyledBurgerMenu } from "./styled";
 
 export function BurgerMenu() {
   return (

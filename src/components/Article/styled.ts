@@ -1,9 +1,9 @@
+import { baseColumn } from "@utils/mixins";
 import styled from "styled-components";
 
 export const ArticleWrapper = styled.article`
   width: 100%;
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   gap: 24px;
 `;
 

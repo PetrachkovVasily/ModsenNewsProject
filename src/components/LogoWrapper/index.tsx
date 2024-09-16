@@ -1,7 +1,9 @@
 import * as React from "react";
-import { Logo, ModsenLogo, StyledWrapper } from "./styled";
+
 import logo from "@assets/Modsen Logo.svg";
 import newsLogo from "@assets/Footer Logo.svg";
+
+import { Logo, ModsenLogo, StyledWrapper } from "./styled";
 
 export function LogoWrapper() {
   return (

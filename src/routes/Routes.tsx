@@ -1,7 +1,9 @@
 import * as React from "react";
+
 import { createBrowserRouter } from "react-router-dom";
-import { APP, ERROR, MAIN } from "@constants/routsPaths";
+
 import { Loader } from "@components/Loader";
+import { APP, ERROR, MAIN } from "@constants/routsPaths";
 
 const ErrorPage = React.lazy(() => import("@pages/ErrorPage"));
 const MainPage = React.lazy(() => import("@pages/MainPage"));

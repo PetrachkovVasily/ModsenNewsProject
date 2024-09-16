@@ -1,7 +1,9 @@
 import * as React from "react";
-import { StyledButton } from "./styled";
-import { useAppDispatch, useAppSelector } from "@hooks/redux";
+
 import { switchPage } from "@store/reducers/ActionCreator";
+import { useAppDispatch, useAppSelector } from "@hooks/redux";
+
+import { StyledButton } from "./styled";
 
 export function ReadMoreButton() {
   const dispatch = useAppDispatch();

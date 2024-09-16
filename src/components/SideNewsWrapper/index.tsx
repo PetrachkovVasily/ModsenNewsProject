@@ -1,13 +1,15 @@
 import * as React from "react";
+
+import { NewsList } from "@components/NewsList";
+import { CrossButton } from "@components/CrossButton";
+import { ReadMoreButton } from "@components/ReadMoreButton";
+
 import {
   SideHead,
   SideNews,
   StyledHeader,
   StyledSideNewsWrapper,
 } from "./styled";
-import { CrossButton } from "@components/CrossButton";
-import { NewsList } from "@components/NewsList";
-import { ReadMoreButton } from "@components/ReadMoreButton";
 
 export function SideNewsWrapper() {
   return (

@@ -1,9 +1,11 @@
 import * as React from "react";
-import { ArticleImg, ArticleWrapper, Text } from "./styled";
+
 import Titles from "@components/Titles";
-import { useAppSelector } from "@hooks/redux";
 import { Chips } from "@components/Chips";
 import { EMPTY_IMG } from "@constants/notes";
+import { useAppSelector } from "@hooks/redux";
+
+import { ArticleImg, ArticleWrapper, Text } from "./styled";
 
 export function Article() {
   const { currentArticle } = useAppSelector((state) => state.newsReducer);

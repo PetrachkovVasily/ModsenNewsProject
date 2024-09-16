@@ -1,10 +1,10 @@
+import { baseCenterLine } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledHeader = styled.header`
   width: 100%;
   height: 80px;
-  display: flex;
-  justify-content: center;
+  ${baseCenterLine}
   align-items: center;
   background: linear-gradient(
     90deg,

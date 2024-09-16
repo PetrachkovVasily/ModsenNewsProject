@@ -1,9 +1,12 @@
 import * as React from "react";
-import { StyledNewsList } from "./styled";
-import { useAppSelector } from "@hooks/redux";
+
 import { Link } from "react-router-dom";
+
 import { MAIN } from "@constants/routsPaths";
+import { useAppSelector } from "@hooks/redux";
 import { SideArticle } from "@components/SideArticle";
+
+import { StyledNewsList } from "./styled";
 
 export function NewsList() {
   const { news } = useAppSelector((state) => state.newsReducer);

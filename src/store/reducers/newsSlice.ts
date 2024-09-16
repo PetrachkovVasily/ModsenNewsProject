@@ -1,6 +1,6 @@
-import { BURGER_ID, MAX_RIGHT, MIN_PAGE, MIN_RIGHT } from "@constants/notes";
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Article } from "@utils/types/Article";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { BURGER_ID, MAX_RIGHT, MIN_PAGE, MIN_RIGHT } from "@constants/notes";
 
 export interface NewsState {
   news: Article[];

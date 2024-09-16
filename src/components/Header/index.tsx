@@ -1,10 +1,12 @@
 import * as React from "react";
-import { BurgerMenu, InnerHeader, Logo, StyledHeader } from "./styled";
+
 import logo from "@assets/Logo.svg";
-import burger from "@assets/Hamburger Menu.svg";
 import { useAppDispatch } from "@hooks/redux";
-import { chengeIsOpen } from "@store/reducers/ActionCreator";
+import burger from "@assets/Hamburger Menu.svg";
 import { HeaderList } from "@components/HeaderList";
+import { chengeIsOpen } from "@store/reducers/ActionCreator";
+
+import { BurgerMenu, InnerHeader, Logo, StyledHeader } from "./styled";
 
 export function Header() {
   const dispatch = useAppDispatch();

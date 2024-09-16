@@ -1,3 +1,4 @@
+import { baseColumn } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledSideArticle = styled.div`
@@ -28,8 +29,7 @@ export const ArticleImg = styled.img`
 `;
 
 export const ArticleInfo = styled.section`
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   justify-content: space-between;
   height: 122px;
   text-decoration: none;

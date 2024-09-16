@@ -1,9 +1,9 @@
+import { baseButtom } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledButton = styled.button`
   border: none;
-  cursor: pointer;
-  background-color: #ffffff;
+  ${baseButtom}
   display: none;
 
   @media (max-width: 698px) {

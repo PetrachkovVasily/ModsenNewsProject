@@ -1,6 +1,7 @@
 import { AppDispatch } from "..";
-import { newsSlice } from "./newsSlice";
 import { Article } from "@utils/types/Article";
+
+import { newsSlice } from "./newsSlice";
 
 export const switchArticle =
   (article: Article) => async (dispatch: AppDispatch) => {

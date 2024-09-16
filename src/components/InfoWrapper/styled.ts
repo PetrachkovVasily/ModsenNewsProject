@@ -1,3 +1,4 @@
+import { baseColumn } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledInfoWrapper = styled.div`
@@ -15,8 +16,7 @@ export const StyledInfoWrapper = styled.div`
 `;
 
 export const ContactInfoWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   justify-content: space-between;
   height: 100%;
 

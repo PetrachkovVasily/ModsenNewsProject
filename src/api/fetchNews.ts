@@ -1,7 +1,8 @@
 import axios from "axios";
+
 import { AppDispatch } from "@store/index";
-import { newsSlice } from "@store/reducers/newsSlice";
 import { IArticles } from "@utils/types/Article";
+import { newsSlice } from "@store/reducers/newsSlice";
 import { FIRST_ARTICLE, MIN_PAGE } from "@constants/notes";
 
 const API_KEY = process.env.APP_KEY;
@@ -18,8 +19,8 @@ export const fetchNews = (page: number) => async (dispatch: AppDispatch) => {
     if (page == MIN_PAGE) {
       dispatch(
         newsSlice.actions.changeCurrentArticle(
-          response.data.articles[FIRST_ARTICLE]
-        )
+          response.data.articles[FIRST_ARTICLE],
+        ),
       );
     }
   } catch (error) {

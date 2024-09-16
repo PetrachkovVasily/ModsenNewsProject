@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { Description, ErrorCode, HeadersWrapper, StyledMain } from "./styled";
 
 function ErrorPage() {

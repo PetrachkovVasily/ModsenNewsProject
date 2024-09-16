@@ -1,4 +1,7 @@
 import * as React from "react";
+
+import { SideArticleProps } from "@utils/types/SideArticleProps";
+
 import {
   ArticleHeader,
   Author,
@@ -6,7 +9,6 @@ import {
   Description,
   StyledTitles,
 } from "./styled";
-import { SideArticleProps } from "@utils/types/SideArticleProps";
 
 function Titles({ article }: SideArticleProps) {
   return (
