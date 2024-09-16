@@ -24,7 +24,7 @@ export const GlobalStyles = createGlobalStyle`
 
     a {
       text-decoration: none;
-      color: #2C3144;
+      color: ${(props) => props.theme.darkBlue};
     }
   }
 `;

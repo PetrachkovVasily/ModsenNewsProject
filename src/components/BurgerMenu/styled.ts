@@ -9,8 +9,8 @@ export const StyledBurgerMenu = styled.div`
   top: 80px;
   bottom: 0;
   z-index: 3;
-  background-color: white;
-  box-shadow: -5px 0px 10px #b2b2b2;
+  background-color: ${(props) => props.theme.white};
+  box-shadow: -5px 0px 10px ${(props) => props.theme.midGrey};
   transition:
     right 0.3s,
     box-sadow 0.1s;

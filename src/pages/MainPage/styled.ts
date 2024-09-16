@@ -32,7 +32,7 @@ export const ContentWrapper = styled.div`
 
 export const NewsWrapper = styled.div`
   padding: 24px;
-  outline: 1px solid #dbdbdb;
+  outline: 1px solid ${(props) => props.theme.lightGrey};
   width: 47.86vw;
   max-width: 670px;
 

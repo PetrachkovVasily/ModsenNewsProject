@@ -14,13 +14,13 @@ export const ListWrapper = styled.div`
 
 export const ListElement = styled.h3`
   font-size: 14px;
-  color: #ffffff;
+  color: ${(props) => props.theme.white};
   cursor: pointer;
   text-decoration: none;
   font-weight: 300;
   line-height: 21px;
 
   &:hover {
-    color: #ffb366;
+    color: ${(props) => props.theme.orange};
   }
 `;

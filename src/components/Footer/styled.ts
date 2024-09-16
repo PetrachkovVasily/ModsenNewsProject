@@ -10,7 +10,7 @@ export const StyledFooter = styled.footer`
   padding-right: 16px;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f0f1f1;
+  background-color: ${(props) => props.theme.altLightGrey};
   margin-top: auto;
 
   @media (max-width: 524px) {

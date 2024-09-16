@@ -1,21 +1,14 @@
-import { baseColumn } from "@utils/mixins";
+import { baseColumn, baseMainHeader } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledTitles = styled.div`
   ${baseColumn}
   gap: 16px;
-  color: #2c3144;
+  color: ${(props) => props.theme.darkBlue};
 `;
 
 export const ArticleHeader = styled.h2`
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 39px;
-
-  @media (max-width: 698px) {
-    font-size: 26px;
-    line-height: 34px;
-  }
+  ${baseMainHeader}
 `;
 
 export const Description = styled.div`
@@ -27,7 +20,7 @@ export const Date = styled.time`
   font-size: 14px;
   font-weight: 400;
   line-height: 21px;
-  color: #898989;
+  color: ${(props) => props.theme.upGrey};
 `;
 
 export const Author = styled.h3`

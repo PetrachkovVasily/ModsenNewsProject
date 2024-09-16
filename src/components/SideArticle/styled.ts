@@ -7,13 +7,13 @@ export const StyledSideArticle = styled.div`
   height: 170px;
   align-items: center;
   gap: 24px;
-  border-bottom: 1px solid #f0f1f1;
+  border-bottom: 1px solid ${(props) => props.theme.altLightGrey};
   padding-top: 24px;
   padding-bottom: 24px;
   cursor: pointer;
 
   &:hover {
-    background-color: #f0f1f1;
+    background-color: ${(props) => props.theme.altLightGrey};
   }
 `;
 
@@ -52,7 +52,7 @@ export const Description = styled.p`
   font-size: 13px;
   font-weight: 300;
   line-height: 16.25px;
-  color: #393939;
+  color: ${(props) => props.theme.grey};
 
   overflow: hidden;
   display: -webkit-box;
@@ -79,5 +79,5 @@ export const AuthorAndDate = styled.h3`
 `;
 
 export const Date = styled.time`
-  color: #898989;
+  color: ${(props) => props.theme.upGrey};
 `;

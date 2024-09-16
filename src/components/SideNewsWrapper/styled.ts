@@ -1,9 +1,9 @@
-import { baseColumn } from "@utils/mixins";
+import { baseColumn, baseMainHeader } from "@utils/mixins";
 import styled from "styled-components";
 
 export const SideNews = styled.aside`
   padding: 24px;
-  outline: 1px solid #dbdbdb;
+  outline: 1px solid ${(props) => props.theme.lightGrey};
   width: 100%;
   max-width: 476px;
   ${baseColumn}
@@ -28,12 +28,5 @@ export const SideHead = styled.div`
 `;
 
 export const StyledHeader = styled.h2`
-  font-size: 30px;
-  font-weight: 700;
-  line-height: 39px;
-
-  @media (max-width: 698px) {
-    font-size: 26px;
-    line-height: 34px;
-  }
+  ${baseMainHeader}
 `;

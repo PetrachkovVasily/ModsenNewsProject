@@ -24,7 +24,7 @@ export const ErrorCode = styled.h1`
   font-weight: 500;
   line-height: 240px;
   text-align: center;
-  color: #f17900;
+  color: ${(props) => props.theme.lightOrange};
 `;
 
 export const Description = styled.h3`

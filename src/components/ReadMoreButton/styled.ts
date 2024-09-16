@@ -3,8 +3,8 @@ import styled from "styled-components";
 
 export const StyledButton = styled.button`
   ${baseButtom}
-  border: 1px solid #f17900;
-  color: #f17900;
+  border: 1px solid ${(props) => props.theme.lightOrange};
+  color: ${(props) => props.theme.lightOrange};
   width: 148px;
   height: 36px;
   font-size: 16px;

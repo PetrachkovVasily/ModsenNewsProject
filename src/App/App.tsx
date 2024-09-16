@@ -11,6 +11,8 @@ import { useAppDispatch, useAppSelector } from "@hooks/redux";
 import { StyledHeader } from "@components/ErrorBoundary/styled";
 
 import { GlobalStyles } from "./AppStyled";
+import { ThemeProvider } from "styled-components";
+import { theme } from "@utils/theme";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -25,7 +27,7 @@ function App() {
   }, [currentPage]);
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyles />
       <Header />
       <BurgerMenu />
@@ -33,7 +35,7 @@ function App() {
         {error == "" ? <Outlet /> : <StyledHeader>{error}</StyledHeader>}
       </ErrorBoundary>
       <Footer />
-    </>
+    </ThemeProvider>
   );
 }
 

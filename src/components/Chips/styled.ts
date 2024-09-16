@@ -5,5 +5,5 @@ export const StyledChips = styled.h2`
   font-weight: 400;
   line-height: 20px;
   text-align: left;
-  color: #393939;
+  color: ${(props) => props.theme.grey};
 `;
