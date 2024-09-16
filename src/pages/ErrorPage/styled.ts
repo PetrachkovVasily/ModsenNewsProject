@@ -11,26 +11,26 @@ export const StyledMain = styled.main`
   padding-left: 16px;
   padding-right: 16px;
   flex-grow: 1;
-`
+`;
 
 export const HeadersWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-`
+`;
 
 export const ErrorCode = styled.h1`
   font-size: 192px;
   font-weight: 500;
   line-height: 240px;
   text-align: center;
-  color: #F17900;
-`
+  color: #f17900;
+`;
 
 export const Description = styled.h3`
   font-size: 16px;
   font-weight: 500;
   line-height: 20px;
   text-align: center;
-`
+`;

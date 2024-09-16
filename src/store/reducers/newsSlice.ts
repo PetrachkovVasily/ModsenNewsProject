@@ -1,6 +1,6 @@
 import { BURGER_ID, MAX_RIGHT, MIN_RIGHT } from "@constants/notes";
-import { createSlice, current, PayloadAction } from "@reduxjs/toolkit";
-import { Article } from "@utils/Article";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { Article } from "@utils/types/Article";
 
 export interface NewsState {
   news: Article[];
@@ -8,13 +8,13 @@ export interface NewsState {
   error: string;
   currentPage: number;
   currentArticle: Article;
-  isOpen: boolean
+  isOpen: boolean;
 }
 
 const initialState: NewsState = {
   news: [],
   isLoading: false,
-  error: '',
+  error: "",
   currentPage: 1,
   currentArticle: {
     author: "",
@@ -22,17 +22,17 @@ const initialState: NewsState = {
     description: "",
     publishedAt: "",
     source: {
-      name: ""
+      name: "",
     },
     title: "",
     url: "",
-    urlToImage: ""
+    urlToImage: "",
   },
   isOpen: false,
-}
+};
 
 export const newsSlice = createSlice({
-  name: 'news',
+  name: "news",
   initialState,
   reducers: {
     newsFetching(state) {
@@ -40,9 +40,9 @@ export const newsSlice = createSlice({
     },
     newsFetchingSuccess(state, action: PayloadAction<Article[]>) {
       state.isLoading = false;
-      state.error = '';
-      if (state.currentPage == 1){
-        state.news = action.payload
+      state.error = "";
+      if (state.currentPage == 1) {
+        state.news = action.payload;
       } else {
         state.news = [...state.news, ...action.payload];
       }
@@ -54,21 +54,19 @@ export const newsSlice = createSlice({
     changeCurrentPage(state, action: PayloadAction<number>) {
       state.currentPage = action.payload + 1;
     },
-    changeCurrentArticle(state, action: PayloadAction<Article>) {      
+    changeCurrentArticle(state, action: PayloadAction<Article>) {
       state.currentArticle = action.payload;
     },
     openMenu(state) {
       state.isOpen = !state.isOpen;
-      
-      const element = document.getElementById(BURGER_ID)
-      if (element) {
-        if (state.isOpen)
-        element.style.right = MIN_RIGHT
-        else 
-        element.style.right = MAX_RIGHT
-      }
-    }
-  }
-})
 
-export default newsSlice.reducer
+      const element = document.getElementById(BURGER_ID);
+      if (element) {
+        if (state.isOpen) element.style.right = MIN_RIGHT;
+        else element.style.right = MAX_RIGHT;
+      }
+    },
+  },
+});
+
+export default newsSlice.reducer;

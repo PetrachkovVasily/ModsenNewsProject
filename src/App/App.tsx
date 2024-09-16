@@ -6,28 +6,28 @@ import { GlobalStyles } from "./AppStyled";
 import { Outlet } from "react-router";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";
 import { useEffect } from "react";
-import { fetchNews } from "@store/reducers/ActionCreator";
 import ErrorBoundary from "@components/ErrorBoundary";
+import { fetchNews } from "@api/fetchNews";
 
 function App() {
-  const dispatch = useAppDispatch()
-  const {currentPage} = useAppSelector(state => state.newsReducer)
+  const dispatch = useAppDispatch();
+  const { currentPage } = useAppSelector((state) => state.newsReducer);
 
   useEffect(() => {
-    dispatch(fetchNews(currentPage))
-  }, [currentPage])
+    dispatch(fetchNews(currentPage));
+  }, [currentPage]);
 
   return (
     <>
-      <GlobalStyles/>
-      <Header/>
-      <BurgerMenu/>
+      <GlobalStyles />
+      <Header />
+      <BurgerMenu />
       <ErrorBoundary>
-        <Outlet/>
+        <Outlet />
       </ErrorBoundary>
-      <Footer/>
+      <Footer />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

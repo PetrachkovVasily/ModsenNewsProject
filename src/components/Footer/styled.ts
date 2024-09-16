@@ -10,7 +10,7 @@ export const StyledFooter = styled.footer`
   padding-right: 16px;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #F0F1F1;
+  background-color: #f0f1f1;
   margin-top: auto;
 
   @media (max-width: 524px) {
@@ -22,7 +22,7 @@ export const StyledFooter = styled.footer`
     padding-top: 24px;
     padding-bottom: 24px;
   }
-`
+`;
 
 export const InnerFooter = styled.div`
   width: 100%;
@@ -43,4 +43,4 @@ export const InnerFooter = styled.div`
     justify-content: start;
     gap: 24px;
   }
-`
+`;

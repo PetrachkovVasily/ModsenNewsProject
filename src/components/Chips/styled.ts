@@ -6,4 +6,4 @@ export const StyledChips = styled.h2`
   line-height: 20px;
   text-align: left;
   color: #393939;
-`
+`;

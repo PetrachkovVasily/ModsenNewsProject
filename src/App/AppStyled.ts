@@ -27,4 +27,4 @@ export const GlobalStyles = createGlobalStyle`
       color: #2C3144;
     }
   }
-`
+`;

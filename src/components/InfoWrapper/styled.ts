@@ -12,7 +12,7 @@ export const StyledInfoWrapper = styled.div`
     align-items: center;
     gap: 24px;
   }
-`
+`;
 
 export const ContactInfoWrapper = styled.div`
   display: flex;
@@ -23,7 +23,7 @@ export const ContactInfoWrapper = styled.div`
   @media (max-width: 524px) {
     gap: 16px;
   }
-`
+`;
 
 export const Address = styled.h2`
   font-size: 16px;
@@ -38,14 +38,14 @@ export const Address = styled.h2`
   @media (max-width: 524px) {
     text-align: center;
   }
-`
+`;
 export const Contacts = styled(Address)`
   @media (max-width: 896px) {
     font-size: 16px;
     line-height: 24px;
   }
-  
+
   @media (max-width: 524px) {
     text-align: center;
   }
-`
+`;

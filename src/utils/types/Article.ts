@@ -5,13 +5,12 @@ export type Article = {
   publishedAt: string;
   source: {
     name: string;
-    
   };
   title: string;
   url: string;
   urlToImage: string;
-}
+};
 
 export type IArticles = {
-  articles: Article[]
-}
+  articles: Article[];
+};

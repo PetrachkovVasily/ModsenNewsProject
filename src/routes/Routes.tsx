@@ -8,16 +8,16 @@ import { APP, ERROR, MAIN } from "@constants/routsPaths";
 export const router = createBrowserRouter([
   {
     path: APP,
-    element: <App/>,
+    element: <App />,
     children: [
-      { 
-        path: MAIN, 
-        element: <MainPage/>
+      {
+        path: MAIN,
+        element: <MainPage />,
       },
-      { 
-        path: ERROR, 
-        element: <ErrorPage/> 
-      }
-    ]
-  }
-])
+      {
+        path: ERROR,
+        element: <ErrorPage />,
+      },
+    ],
+  },
+]);

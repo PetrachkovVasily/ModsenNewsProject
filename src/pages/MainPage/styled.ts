@@ -15,7 +15,7 @@ export const StyledMain = styled.main`
     padding-top: 16px;
     padding-bottom: 26px;
   }
-`
+`;
 
 export const ContentWrapper = styled.div`
   display: flex;
@@ -29,11 +29,11 @@ export const ContentWrapper = styled.div`
   @media (max-width: 698px) {
     margin: 0;
   }
-`
+`;
 
 export const NewsWrapper = styled.div`
   padding: 24px;
-  outline: 1px solid #DBDBDB;
+  outline: 1px solid #dbdbdb;
   width: 47.86vw;
   max-width: 670px;
 
@@ -42,7 +42,7 @@ export const NewsWrapper = styled.div`
     padding: 16px;
     outline: none;
   }
-`
+`;
 
 export const SideNewsHider = styled.div`
   width: 34vw;
@@ -51,4 +51,4 @@ export const SideNewsHider = styled.div`
   @media (max-width: 698px) {
     display: none;
   }
-`
+`;

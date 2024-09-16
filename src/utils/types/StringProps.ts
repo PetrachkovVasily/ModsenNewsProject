@@ -1,3 +1,3 @@
 export type StringProps = {
-  publisher: string,
-}
+  publisher: string;
+};

@@ -1,14 +1,10 @@
-import * as React from "react"
-import { StyledChips } from "./styled"
-import { StringProps } from "@utils/StringProps"
-import { CHIPS } from "@constants/notes"
+import * as React from "react";
+import { StyledChips } from "./styled";
+import { CHIPS } from "@constants/notes";
+import { StringProps } from "@utils/types/StringProps";
 
-function Chips({publisher}: StringProps) {
-  return (
-    <StyledChips>
-      {CHIPS + publisher}
-    </StyledChips>
-  )
+function Chips({ publisher }: StringProps) {
+  return <StyledChips>{CHIPS + publisher}</StyledChips>;
 }
 
-export default Chips
+export default Chips;
