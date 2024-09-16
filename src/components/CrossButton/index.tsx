@@ -1,20 +1,20 @@
-import * as React from "react"
-import { StyledButton } from "./styled"
-import cross from "@assets/Cross.svg"
-import { useAppDispatch } from "@hooks/redux"
-import { chengeIsOpen } from "@store/reducers/ActionCreator"
+import * as React from "react";
 
-function CrossButton() {
-  const dispatch = useAppDispatch()
+import cross from "@assets/Cross.svg";
+import { useAppDispatch } from "@hooks/redux";
+import { chengeIsOpen } from "@store/reducers/ActionCreator";
+
+import { StyledButton } from "./styled";
+
+export function CrossButton() {
+  const dispatch = useAppDispatch();
 
   function handleOpen() {
-    dispatch(chengeIsOpen())
+    dispatch(chengeIsOpen());
   }
   return (
     <StyledButton onClick={handleOpen}>
       <img src={cross} alt="Cross Button" />
     </StyledButton>
-  )
+  );
 }
-
-export default CrossButton

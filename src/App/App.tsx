@@ -1,33 +1,42 @@
-import BurgerMenu from "@components/BurgerMenu";
-import Footer from "@components/Footer";
-import Header from "@components/Header";
 import * as React from "react";
-import { GlobalStyles } from "./AppStyled";
+
 import { Outlet } from "react-router";
+
+import { fetchNews } from "@api/fetchNews";
+import { Footer } from "@components/Footer";
+import { Header } from "@components/Header";
+import { BurgerMenu } from "@components/BurgerMenu";
+import { ErrorBoundary } from "@components/ErrorBoundary";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";
-import { useEffect } from "react";
-import { fetchNews } from "@store/reducers/ActionCreator";
-import ErrorBoundary from "@components/ErrorBoundary";
+import { StyledHeader } from "@components/ErrorBoundary/styled";
+
+import { GlobalStyles } from "./AppStyled";
+import { ThemeProvider } from "styled-components";
+import { theme } from "@utils/theme";
 
 function App() {
-  const dispatch = useAppDispatch()
-  const {currentPage} = useAppSelector(state => state.newsReducer)
+  const dispatch = useAppDispatch();
+  const { currentPage, error } = useAppSelector((state) => state.newsReducer);
 
-  useEffect(() => {
-    dispatch(fetchNews(currentPage))
-  }, [currentPage])
+  const memorisedFetch = React.useCallback(() => {
+    dispatch(fetchNews(currentPage));
+  }, [currentPage]);
+
+  React.useEffect(() => {
+    memorisedFetch();
+  }, [currentPage]);
 
   return (
-    <>
-      <GlobalStyles/>
-      <Header/>
-      <BurgerMenu/>
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <Header />
+      <BurgerMenu />
       <ErrorBoundary>
-        <Outlet/>
+        {error == "" ? <Outlet /> : <StyledHeader>{error}</StyledHeader>}
       </ErrorBoundary>
-      <Footer/>
-    </>
-  )
+      <Footer />
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;

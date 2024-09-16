@@ -6,7 +6,7 @@
     "strict": true,
     "noImplicitReturns": true,
     "noImplicitAny": true,
-    "module": "es6",
+    "module": "esnext",
     "moduleResolution": "node",
     "target": "es5",
     "allowJs": true,
@@ -20,6 +20,7 @@
       "@api/*": ["./src/api/*"],
       "@utils/*": ["./src/utils/*"],
       "@hooks/*": ["./src/hooks/*"],
+      "@mytypes/*": ["./src/types/*"]
     },
     "types": ["@types/jest", "@types/node", "cypress"]
   },

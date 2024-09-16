@@ -7,6 +7,7 @@ declare module "@constants/*";
 declare module "@api/*";
 declare module "@utils/*";
 declare module "@hooks/*";
+declare module "@mytypes/*";
 declare module "*.jpg";
 declare module "*.jpeg";
 declare module "*.png";

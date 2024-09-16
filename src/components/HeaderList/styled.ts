@@ -10,17 +10,17 @@ export const ListWrapper = styled.div`
   @media (max-width: 698px) {
     display: none;
   }
-`
+`;
 
 export const ListElement = styled.h3`
   font-size: 14px;
-  color: #FFFFFF;
+  color: ${(props) => props.theme.white};
   cursor: pointer;
   text-decoration: none;
   font-weight: 300;
   line-height: 21px;
 
   &:hover {
-    color: #FFB366;
+    color: ${(props) => props.theme.orange};
   }
-`
+`;

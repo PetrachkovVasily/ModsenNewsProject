@@ -1,3 +1,4 @@
+import { baseColumn } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledSideArticle = styled.div`
@@ -6,15 +7,15 @@ export const StyledSideArticle = styled.div`
   height: 170px;
   align-items: center;
   gap: 24px;
-  border-bottom: 1px solid #F0F1F1;
+  border-bottom: 1px solid ${(props) => props.theme.altLightGrey};
   padding-top: 24px;
   padding-bottom: 24px;
   cursor: pointer;
 
   &:hover {
-    background-color: #F0F1F1;
+    background-color: ${(props) => props.theme.altLightGrey};
   }
-`
+`;
 
 export const ArticleImg = styled.img`
   width: 32.7%;
@@ -25,15 +26,14 @@ export const ArticleImg = styled.img`
   @media (max-width: 698px) {
     width: 140px;
   }
-`
+`;
 
 export const ArticleInfo = styled.section`
-  display: flex;
-  flex-direction: column;
+  ${baseColumn}
   justify-content: space-between;
   height: 122px;
   text-decoration: none;
-`
+`;
 
 export const Title = styled.h1`
   font-size: 16px;
@@ -46,13 +46,13 @@ export const Title = styled.h1`
   line-height: 1.3em;
   height: 2.6em;
   text-decoration: none;
-`
+`;
 
 export const Description = styled.p`
   font-size: 13px;
   font-weight: 300;
   line-height: 16.25px;
-  color: #393939;
+  color: ${(props) => props.theme.grey};
 
   overflow: hidden;
   display: -webkit-box;
@@ -70,14 +70,14 @@ export const Description = styled.p`
     -webkit-line-clamp: 3;
     height: 3.9em;
   }
-`
+`;
 
 export const AuthorAndDate = styled.h3`
   font-size: 13px;
   font-weight: 300;
   line-height: 16.25px;
-`
+`;
 
 export const Date = styled.time`
-  color: #898989;
-`
+  color: ${(props) => props.theme.upGrey};
+`;

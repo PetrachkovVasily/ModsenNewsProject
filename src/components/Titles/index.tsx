@@ -1,23 +1,25 @@
-import * as React from "react"
-import { ArticleHeader, Author, Date, Description, StyledTitles } from "./styled"
-import { SideArticleProps } from "@utils/SideArticleProps"
+import * as React from "react";
 
-function Titles({article}: SideArticleProps) {
+import { SideArticleProps } from "@utils/types/SideArticleProps";
+
+import {
+  ArticleHeader,
+  Author,
+  Date,
+  Description,
+  StyledTitles,
+} from "./styled";
+
+function Titles({ article }: SideArticleProps) {
   return (
     <StyledTitles>
-      <ArticleHeader>
-        {article.title}
-      </ArticleHeader>
+      <ArticleHeader>{article.title}</ArticleHeader>
       <Description>
-        <Date>
-          {article.publishedAt}
-        </Date>
-        <Author>
-          by {article.source.name}
-        </Author>
+        <Date>{article.publishedAt}</Date>
+        <Author>by {article.source.name}</Author>
       </Description>
     </StyledTitles>
-  )
+  );
 }
 
-export default Titles
+export default Titles;

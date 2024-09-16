@@ -11,7 +11,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
-    publicPath: '/'
+    publicPath: "/",
   },
   devServer: {
     historyApiFallback: true,
@@ -36,7 +36,7 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      templateContent: ({ htmlWebpackPlugin }) =>`
+      templateContent: ({ htmlWebpackPlugin }) => `
       <!DOCTYPE html>
       <html>
         <head>
@@ -50,8 +50,8 @@ const config = {
       </html>`,
       filename: "index.html",
     }),
-    new webpack.EnvironmentPlugin({ 
-      APP_KEY : "deffc5a5a03d4d18b6e5b2e3980a2810", 
+    new webpack.EnvironmentPlugin({
+      APP_KEY: "deffc5a5a03d4d18b6e5b2e3980a2810",
     }),
   ],
   resolve: {
@@ -65,6 +65,7 @@ const config = {
       "@api": path.resolve(__dirname, "./src/api/"),
       "@utils": path.resolve(__dirname, "./src/utils/"),
       "@hooks": path.resolve(__dirname, "./src/hooks/"),
+      "@mytypes": path.resolve(__dirname, "./src/types/"),
     },
   },
 };
