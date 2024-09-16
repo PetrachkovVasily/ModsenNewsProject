@@ -1,10 +1,7 @@
-import * as React from "react"
-import { StyledHeader } from "./styled"
+import * as React from "react";
 
-function Loader() {
-  return (
-    <StyledHeader>Loading...</StyledHeader>
-  )
+import { StyledHeader } from "./styled";
+
+export function Loader() {
+  return <StyledHeader>Loading...</StyledHeader>;
 }
-
-export default Loader

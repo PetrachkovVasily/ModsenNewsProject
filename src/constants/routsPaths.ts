@@ -1,3 +1,3 @@
-export const APP = "/"
-export const MAIN = ""
-export const ERROR = "*"
+export const APP = "/";
+export const MAIN = "";
+export const ERROR = "*";

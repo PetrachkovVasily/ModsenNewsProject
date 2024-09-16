@@ -19,7 +19,7 @@ export const StyledWrapper = styled.div`
     justify-content: start;
     gap: 24px;
   }
-`
+`;
 
 export const ModsenLogo = styled.img`
   width: 122px;
@@ -29,7 +29,7 @@ export const ModsenLogo = styled.img`
     width: 86px;
     height: 22px;
   }
-`
+`;
 
 export const Logo = styled.img`
   width: 149px;
@@ -39,4 +39,4 @@ export const Logo = styled.img`
     width: 102px;
     height: 44px;
   }
-`
+`;

@@ -1,11 +1,11 @@
+import { baseCenterLine, baseColumn } from "@utils/mixins";
 import styled from "styled-components";
 
 export const StyledMain = styled.main`
   margin-top: 80px;
   width: 100%;
-  display: flex;
+  ${baseColumn}
   align-items: center;
-  flex-direction: column;
   padding-left: 16px;
   padding-right: 16px;
   flex-grow: 1;
@@ -15,11 +15,10 @@ export const StyledMain = styled.main`
     padding-top: 16px;
     padding-bottom: 26px;
   }
-`
+`;
 
 export const ContentWrapper = styled.div`
-  display: flex;
-  justify-content: center;
+  ${baseCenterLine}
   width: 100%;
   max-width: 1368px;
   margin-top: 56px;
@@ -29,11 +28,11 @@ export const ContentWrapper = styled.div`
   @media (max-width: 698px) {
     margin: 0;
   }
-`
+`;
 
 export const NewsWrapper = styled.div`
   padding: 24px;
-  outline: 1px solid #DBDBDB;
+  outline: 1px solid ${(props) => props.theme.lightGrey};
   width: 47.86vw;
   max-width: 670px;
 
@@ -42,7 +41,7 @@ export const NewsWrapper = styled.div`
     padding: 16px;
     outline: none;
   }
-`
+`;
 
 export const SideNewsHider = styled.div`
   width: 34vw;
@@ -51,4 +50,4 @@ export const SideNewsHider = styled.div`
   @media (max-width: 698px) {
     display: none;
   }
-`
+`;
