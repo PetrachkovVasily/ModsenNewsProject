@@ -16,13 +16,17 @@ import { EMPTY_IMG, FIRST_ARTICLE } from "@constants/notes";
 export function SideArticle({ article }: SideArticleProps) {
   const dispatch = useAppDispatch();
 
+  const memorisedChangeAtricle = React.useCallback(handleChangeArticle, [
+    article,
+  ]);
+
   function handleChangeArticle() {
     dispatch(switchArticle(article));
     window.scroll(FIRST_ARTICLE, FIRST_ARTICLE);
   }
 
   return (
-    <StyledSideArticle onClick={handleChangeArticle}>
+    <StyledSideArticle onClick={memorisedChangeAtricle}>
       <ArticleImg src={article.urlToImage || EMPTY_IMG} alt="Article Image" />
       <ArticleInfo>
         <Title>{article.title}</Title>

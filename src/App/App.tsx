@@ -13,8 +13,12 @@ function App() {
   const dispatch = useAppDispatch();
   const { currentPage, error } = useAppSelector((state) => state.newsReducer);
 
-  React.useEffect(() => {
+  const memorisedFetch = React.useCallback(() => {
     dispatch(fetchNews(currentPage));
+  }, [currentPage]);
+
+  React.useEffect(() => {
+    memorisedFetch();
   }, [currentPage]);
 
   return (
@@ -24,7 +28,6 @@ function App() {
       <BurgerMenu />
       <ErrorBoundary>
         {error == "" ? <Outlet /> : <StyledHeader>{error}</StyledHeader>}
-        {/* <Outlet /> */}
       </ErrorBoundary>
       <Footer />
     </>
