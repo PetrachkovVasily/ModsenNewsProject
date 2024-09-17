@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { Loader } from "@components/Loader";
 import { useAppSelector } from "@hooks/redux";

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import cross from "@assets/Cross.svg";
 import { useAppDispatch } from "@hooks/redux";

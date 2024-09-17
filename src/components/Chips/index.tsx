@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { CHIPS } from "@constants/notes";
 import { StringProps } from "@utils/types/StringProps";

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { switchPage } from "@store/reducers/ActionCreator";
 import { useAppDispatch, useAppSelector } from "@hooks/redux";

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { InfoWrapper } from "@components/InfoWrapper";
 import { LogoWrapper } from "@components/LogoWrapper";
