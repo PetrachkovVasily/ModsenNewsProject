@@ -1,7 +1,9 @@
-import * as React from "react";
+import React, { useCallback, useEffect } from "react";
 
 import { Outlet } from "react-router";
+import { ThemeProvider } from "styled-components";
 
+import { theme } from "@utils/theme";
 import { fetchNews } from "@api/fetchNews";
 import { Footer } from "@components/Footer";
 import { Header } from "@components/Header";
@@ -11,18 +13,16 @@ import { useAppDispatch, useAppSelector } from "@hooks/redux";
 import { StyledHeader } from "@components/ErrorBoundary/styled";
 
 import { GlobalStyles } from "./AppStyled";
-import { ThemeProvider } from "styled-components";
-import { theme } from "@utils/theme";
 
 function App() {
   const dispatch = useAppDispatch();
   const { currentPage, error } = useAppSelector((state) => state.newsReducer);
 
-  const memorisedFetch = React.useCallback(() => {
+  const memorisedFetch = useCallback(() => {
     dispatch(fetchNews(currentPage));
   }, [currentPage]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     memorisedFetch();
   }, [currentPage]);
 

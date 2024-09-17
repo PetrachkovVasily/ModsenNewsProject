@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import logo from "@assets/Modsen Logo.svg";
 import newsLogo from "@assets/Footer Logo.svg";

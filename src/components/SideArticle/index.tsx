@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { useAppDispatch } from "@hooks/redux";
 import { EMPTY_IMG, FIRST_ARTICLE } from "@constants/notes";

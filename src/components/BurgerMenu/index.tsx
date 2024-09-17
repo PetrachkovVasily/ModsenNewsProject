@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { BURGER_ID } from "@constants/notes";
 import { SideNewsWrapper } from "@components/SideNewsWrapper";

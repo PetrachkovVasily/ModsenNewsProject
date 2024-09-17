@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import Titles from "@components/Titles";
 import { Chips } from "@components/Chips";

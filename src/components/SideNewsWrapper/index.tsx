@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 
 import { NewsList } from "@components/NewsList";
 import { CrossButton } from "@components/CrossButton";
